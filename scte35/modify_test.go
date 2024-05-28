@@ -26,9 +26,10 @@ package scte35
 
 import (
 	"bytes"
-	"github.com/Comcast/gots/v2"
-	"github.com/Comcast/gots/v2/psi"
 	"testing"
+
+	"github.com/potterxu/gots/v2"
+	"github.com/potterxu/gots/v2/psi"
 )
 
 var testScteCreate = []byte{

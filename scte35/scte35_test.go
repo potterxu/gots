@@ -1,7 +1,7 @@
 /*
 MIT License
 
-Copyright 2016 Comcast Cable Communications Management, LLC
+# Copyright 2016 Comcast Cable Communications Management, LLC
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -30,7 +30,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/Comcast/gots/v2"
+	"github.com/potterxu/gots/v2"
 )
 
 var testScte = []byte{

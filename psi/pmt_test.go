@@ -30,8 +30,8 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/Comcast/gots/v2"
-	"github.com/Comcast/gots/v2/packet"
+	"github.com/potterxu/gots/v2"
+	"github.com/potterxu/gots/v2/packet"
 )
 
 func parseHexString(h string) *packet.Packet {

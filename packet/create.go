@@ -25,7 +25,7 @@ SOFTWARE.
 package packet
 
 import (
-	"github.com/Comcast/gots/v2"
+	"github.com/potterxu/gots/v2"
 )
 
 var (
@@ -74,11 +74,12 @@ var (
 
 // Example usage
 // pkt, _ = SetCC(
-//        Create(pid,
-//              WithHasPayloadFlag,
-//              WithContinuousAF,
-//              WithPUSI),
-//        cc)
+//
+//	Create(pid,
+//	      WithHasPayloadFlag,
+//	      WithContinuousAF,
+//	      WithPUSI),
+//	cc)
 func Create(pid int, options ...func(*Packet)) *Packet {
 	var pkt Packet
 	setPid(&pkt, pid)

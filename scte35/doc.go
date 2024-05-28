@@ -26,8 +26,8 @@ SOFTWARE.
 package scte35
 
 import (
-	"github.com/Comcast/gots/v2"
-	"github.com/Comcast/gots/v2/psi"
+	"github.com/potterxu/gots/v2"
+	"github.com/potterxu/gots/v2/psi"
 )
 
 // SpliceCommandType is a type used to describe the types of splice commands.
@@ -482,14 +482,15 @@ type SegmentationDescriptor interface {
 // example code is below.
 // s := scte35.NewState()
 // scte,_ := scte.ParseSCTE35(bytes)
-// for _,d := range(scte.Descriptors()) {
-//   closed = s.ProcessDescriptor(d)
-//   ...handle closed signals appropriately here
-//   if d.HasDuration() {
-//     time.AfterFunc(d.Duration() + someFudgeDelta,
-//                    func() { closed = s.Close(d) })
-//   }
-// }
+//
+//	for _,d := range(scte.Descriptors()) {
+//	  closed = s.ProcessDescriptor(d)
+//	  ...handle closed signals appropriately here
+//	  if d.HasDuration() {
+//	    time.AfterFunc(d.Duration() + someFudgeDelta,
+//	                   func() { closed = s.Close(d) })
+//	  }
+//	}
 type State interface {
 	// Open returns a list of open signals
 	Open() []SegmentationDescriptor

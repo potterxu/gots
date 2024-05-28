@@ -30,8 +30,8 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/Comcast/gots/v2"
-	"github.com/Comcast/gots/v2/packet"
+	"github.com/potterxu/gots/v2"
+	"github.com/potterxu/gots/v2/packet"
 )
 
 const PidNotFound int = 1<<16 - 1
@@ -277,7 +277,9 @@ func CanBuildPMT(payload []byte, sectionLength uint16) bool {
 
 // FilterPMTPacketsToPids filters the PMT contents of the provided packet to the PIDs provided and returns a new packet(s).
 // For example: if the provided PMT has PIDs 101, 102, and 103 and the provided PIDs are 101 and 102,
-//     the new PMT will have only descriptors for PID 101 and 102. The descriptor for PID 103 will be stripped from the new PMT packet.
+//
+//	the new PMT will have only descriptors for PID 101 and 102. The descriptor for PID 103 will be stripped from the new PMT packet.
+//
 // Returns packets and nil error if all pids are present in the PMT.
 // Returns packets and non-nil error if some pids are present in the PMT.
 // Returns nil packets and non-nil error if none of the pids are present in the PMT.
